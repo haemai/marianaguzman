@@ -1,0 +1,59 @@
+@keyframes relleno {
+    0%   {fill:red; left:0px; top:0px;}
+  25%  {fill:yellow; left:50px; top:-50px;}
+  50%  {fill:blue; left:100px; top:0px;}
+  75%  {fill:green; left:150px; top:-50px;}
+  100% {fill:red; left:200px; top:0px;}
+  }
+  
+  @keyframes rotacion{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes tamaño{
+    from{width: 50px;}
+    to{width: 400px;}
+  }
+
+body{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heart{
+    width: 150px;
+    fill: #e64794;
+    stroke: black;
+    stroke-width: 1px;
+    animation-name: relleno;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+
+#sparkly{
+    fill: rgb(255, 221, 127);
+    stroke: rgb(160, 119, 5);
+    stroke-width: 0.5px;
+    width: 200px;
+    animation: rotacion 3s linear .5s infinite forwards;
+}
+
+#cake{
+    fill: rgb(168, 46, 205);
+    stroke: rgb(108, 100, 182);
+    stroke-width: 1px;
+    animation: tamaño 5s linear .7s infinite forwards;
+}
